@@ -1,0 +1,23 @@
+
+{
+"manifest_version": 2,
+    "name": "MLG",
+    "description": "Let's you experience the MLG pro life",
+    "version": "0.1",
+     
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "audio.js"
+            ],
+            "css": [
+              "cursor.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}

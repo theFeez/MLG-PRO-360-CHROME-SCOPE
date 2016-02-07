@@ -1,14 +1,14 @@
 var elements = document.getElementsByTagName('*');
 var links = document.getElementsByTagName('a');
-var counter=0;
-var left=0;
+var counter = 0;
+var left = 0;
 var animate;
 var bg = document.getElementsByTagName('body');
 var angleCounter = 10;
 var ready4dank = false;
-for(var i=0;i<bg.length;i++)
+for(var i = 0; i < bg.length; i++)
 {
-	bg[i].id='mlgPro';
+	bg[i].id = 'mlgPro';
 }
 
 var screenWidth = window.innerWidth;
@@ -26,11 +26,11 @@ coreyText = document.createElement('P');
 rekt=document.createElement('P');
 
 
-for (var i=0; i<elements.length;i++)
+for (var i = 0; i < elements.length; i++)
 {
 	document.onmousedown = function(){
 		
-		if(getRandomInt(1,5)===2)
+		if(getRandomInt(1,5) === 2)
 		{
 			var shot = new Audio('http://soundboard.panictank.net/intervention%20420.mp3');
 			var getCam = new Audio('http://soundboard.panictank.net/MOM%20GET%20THE%20CAMERA.mp3');
@@ -199,7 +199,7 @@ function moveLeft()
 function moveSideways()
 {
 	
-	if(parseInt(meme1.style.left)<=10)
+	if(parseInt(meme1.style.left) <= 10)
 	{
 		moveRight(meme1);
 		
@@ -225,9 +225,9 @@ function moveUpways()
 
 function moveDown()
 {
-	meme2.style.top = parseInt(meme2.style.top)+10+'px';
+	meme2.style.top = parseInt(meme2.style.top) + 10 + 'px';
     	
-        if(parseInt(meme2.style.top)>screenHeight-20)
+        if(parseInt(meme2.style.top) > screenHeight - 20)
     	{
     		animate = setTimeout(moveUp,20);
     	}
@@ -239,9 +239,9 @@ function moveDown()
 
 function moveUp()
 {
-	meme2.style.top = parseInt(meme2.style.top)-10+'px';
+	meme2.style.top = parseInt(meme2.style.top) - 10 + 'px';
     	
-    if(parseInt(meme2.style.top)<20)
+    if(parseInt(meme2.style.top) < 20)
     {
     	animate = setTimeout(moveDown,20);
     }
@@ -259,7 +259,7 @@ function stop(){
 function shake()
 {
 	console.log("shake");
-	shakememe.style.transform="rotate(10deg)"
+	shakememe.style.transform = "rotate(10deg)"
 	
 	setTimeout(function(){shakememe.style.transform="rotate(-10deg)"; },300);
 	setTimeout(shake,600);
@@ -278,21 +278,21 @@ function text()
 {
 	
 	document.body.appendChild(rekt);
-	rekt.innerHTML='rekt';
-	rekt.style.position='fixed';
-	rekt.style.fontFamily='Comic Sans MS';
-	rekt.style.fontSize='200px';
-	rekt.style.color='purple';
-	rekt.style.left='50%';
-	rekt.style.top='50%';
-	rekt.style.zIndex='600';
+	rekt.innerHTML = 'rekt';
+	rekt.style.position = 'fixed';
+	rekt.style.fontFamily = 'Comic Sans MS';
+	rekt.style.fontSize = '200px';
+	rekt.style.color = 'purple';
+	rekt.style.left = '50%';
+	rekt.style.top = '50%';
+	rekt.style.zIndex = '600';
 	meme2.setAttribute("id","memeShit");
 }
 
 function growText()
 {
-	rekt.style.fontSize=parseInt(rekt.style.fontSize)+10+'px';
-	if(parseInt(rekt.style.fontSize)>300)
+	rekt.style.fontSize = parseInt(rekt.style.fontSize) + 10 + 'px';
+	if(parseInt(rekt.style.fontSize) > 300)
 	{
 		setTimeout(shrinkText,20);
 
@@ -305,8 +305,8 @@ function growText()
 }
 function shrinkText()
 {
-	rekt.style.fontSize=parseInt(rekt.style.fontSize)-10+'px';
-	if(parseInt(rekt.style.fontSize)<200)
+	rekt.style.fontSize = parseInt(rekt.style.fontSize) - 10 + 'px';
+	if(parseInt(rekt.style.fontSize) < 200)
 	{
 		setTimeout(growText,20);
 
@@ -323,7 +323,7 @@ function getRandomInt(min, max) {
 function shakeCena()
 {
 	
-	cena.style.transform="rotate(-10deg)"
+	cena.style.transform = "rotate(-10deg)"
 	
 	setTimeout(function(){cena.style.transform="rotate(10deg)"; },300);
 	setTimeout(shakeCena,600);
@@ -334,13 +334,13 @@ function coreyInTheHouse()
 	
 	document.body.appendChild(coreyText);
 	coreyText.innerHTML='COREY IS IN THE HOUSE !!!!11!!1!!';
-	coreyText.style.position='fixed';
-	coreyText.style.fontFamily='Comic Sans MS';
-	coreyText.style.fontSize='40px';
-	coreyText.style.color='pink';
-	coreyText.style.left='350px';
-	coreyText.style.top='250px';
-	coreyText.style.zIndex='600';
+	coreyText.style.position = 'fixed';
+	coreyText.style.fontFamily = 'Comic Sans MS';
+	coreyText.style.fontSize = '40px';
+	coreyText.style.color = 'pink';
+	coreyText.style.left = '350px';
+	coreyText.style.top = '250px';
+	coreyText.style.zIndex = '600';
 }
 
 
